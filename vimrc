@@ -23,6 +23,17 @@ set list
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_ruby_rubocop_exec = '/Users/mczech/Documents/dotfiles/vendor/binstubs/rubocop'
+
 " Enable HardMode
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call EasyMode()
 
+language en_US
+
+if has('nvim')
+  tnoremap <Esc> <c-\><c-n>
+endif
+
+set fillchars+=vert:│
+hi VertSplit ctermbg=NONE guibg=NONE
