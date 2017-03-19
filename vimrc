@@ -38,3 +38,7 @@ endif
 " Set thin vertical bar
 set fillchars+=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
+
+" Set working dir to current file
+set autochdir
+
