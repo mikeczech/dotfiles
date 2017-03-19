@@ -32,8 +32,9 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call EasyMode()
 language en_US
 
 if has('nvim')
-  tnoremap <Esc> <c-\><c-n>
+  tnoremap <S-x> <c-\><c-n>
 endif
 
+" Set thin vertical bar
 set fillchars+=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
