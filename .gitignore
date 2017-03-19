@@ -1,1 +1,5 @@
 vim/plugged
+.bundle/
+Gemfile.lock
+vendor/
+vim/init.vim
