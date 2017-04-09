@@ -33,6 +33,7 @@ language en_US
 
 if has('nvim')
   tnoremap <S-x> <c-\><c-n>
+  set clipboard+=unnamedplus
 endif
 
 " Set thin vertical bar
