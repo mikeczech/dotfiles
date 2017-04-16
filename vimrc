@@ -7,6 +7,7 @@ call plug#end()
 syntax enable
 set background=dark
 colorscheme solarized
+set relativenumber
 set number
 set expandtab
 set shiftwidth=2
