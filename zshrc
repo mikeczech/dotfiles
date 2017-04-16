@@ -73,3 +73,9 @@ function pet-select() {
 }
 zle -N pet-select
 bindkey '^s' pet-select
+
+# Neovim autocd
+neovim_autocd() {
+  [[ $NVIM_LISTEN_ADDRESS ]] && python ~/.scripts/neovim-autocd.py
+}
+chpwd_functions+=( neovim_autocd )
