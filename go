@@ -27,6 +27,7 @@ function task_install {
   make_symlink vim ~/.vim
   make_symlink vimrc ~/.vimrc
   make_symlink vimrc ~/.vim/init.vim # nvim compatibility
+  make_symlink zshrc ~/.zshrc
 }
 
 function task_usage {
