@@ -56,7 +56,7 @@ setopt share_history
 unsetopt nomatch
 
 # Launch SSH agent if not running
-pgrep ssh-agent >/dev/null || eval $(ssh-agent) >/dev/null
+# pgrep ssh-agent >/dev/null || eval $(ssh-agent) >/dev/null
 
 # Init rbenv
 eval "$(rbenv init -)"
@@ -79,3 +79,6 @@ neovim_autocd() {
   [[ $NVIM_LISTEN_ADDRESS ]] && python ~/.scripts/neovim-autocd.py
 }
 chpwd_functions+=( neovim_autocd )
+
+# Use GPG agent for SSH
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
