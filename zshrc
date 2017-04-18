@@ -56,7 +56,9 @@ setopt share_history
 unsetopt nomatch
 
 # Launch SSH agent if not running
-# pgrep ssh-agent >/dev/null || eval $(ssh-agent) >/dev/null
+pgrep ssh-agent >/dev/null || ssh-agent > ~/.ssh-agent-conf
+
+source ~/.ssh-agent-conf
 
 # Init rbenv
 eval "$(rbenv init -)"
@@ -81,4 +83,4 @@ neovim_autocd() {
 chpwd_functions+=( neovim_autocd )
 
 # Use GPG agent for SSH
-export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+# export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
