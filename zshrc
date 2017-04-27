@@ -23,6 +23,7 @@ export GIT_EDITOR=nvim
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias ll='ls -l'
 alias jhpass='/Users/mczech/Documents/Projects/JH/repositories/globus-password-store/go pass'
+alias personal-pass='/Users/mczech/Documents/PasswordStore/Personal/go pass'
 alias jh-jumphost='/Users/mczech/Documents/Projects/JH/ssh_jumphost_aws.sh'
 alias clang-tidy='/usr/local/opt/llvm/bin/clang-tidy'
 alias vim='nvim'
