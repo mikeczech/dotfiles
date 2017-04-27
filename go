@@ -34,6 +34,7 @@ function task_install {
   make_symlink vimrc ~/.vimrc
   make_symlink vimrc ~/.vim/init.vim # nvim compatibility
   make_symlink zshrc ~/.zshrc
+  make_symlink tmux.conf ~/.tmux.conf
   make_symlink scripts ~/.scripts
 }
 
