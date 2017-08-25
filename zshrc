@@ -50,8 +50,6 @@ unsetopt nomatch
 # Launch SSH agent if not running
 pgrep ssh-agent >/dev/null || ssh-agent > ~/.ssh-agent-conf
 
-# source ~/.ssh-agent-conf
-
 # Init rbenv
 eval "$(rbenv init -)"
 
