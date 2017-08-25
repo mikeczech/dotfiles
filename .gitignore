@@ -3,3 +3,4 @@ vim/plugged
 Gemfile.lock
 vendor/
 vim/init.vim
+aliases

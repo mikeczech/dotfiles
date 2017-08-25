@@ -21,12 +21,7 @@ export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 export GIT_EDITOR=nvim
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-alias ll='ls -l'
-alias jhpass='/Users/mczech/Documents/Projects/JH/repositories/globus-password-store/go pass'
-alias personal-pass='/Users/mczech/Documents/PasswordStore/Personal/go pass'
-alias jh-jumphost='/Users/mczech/Documents/Projects/JH/ssh_jumphost_aws.sh'
-alias clang-tidy='/usr/local/opt/llvm/bin/clang-tidy'
-alias vim='nvim'
+source ~/.aliases
 
 # Make history almost infinite
 export HISTFILE=~/.zsh_history
@@ -38,16 +33,12 @@ export AWS_REGION="eu-central-1"
 export AWS_DEFAULT_REGION="${AWS_REGION}"
 
 # Setup the C/C++ compiler
-#export CC="/usr/local/bin/gcc-6"
-#export CXX="/usr/local/bin/g++-6"
-#export CC="/usr/bin/clang"
-#export CXX="/usr/bin/clang++"
 export CC="/usr/local/opt/llvm/bin/clang"
 export CXX="/usr/local/opt/llvm/bin/clang++"
 
 # Make go apps accessible from PATH
 export GOPATH="/Users/mczech/go"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOPATH/bin:/usr/local/opt/llvm/bin"
 
 # Make history unique across all terminals
 setopt inc_append_history
@@ -59,7 +50,7 @@ unsetopt nomatch
 # Launch SSH agent if not running
 pgrep ssh-agent >/dev/null || ssh-agent > ~/.ssh-agent-conf
 
-source ~/.ssh-agent-conf
+# source ~/.ssh-agent-conf
 
 # Init rbenv
 eval "$(rbenv init -)"
@@ -84,4 +75,9 @@ neovim_autocd() {
 chpwd_functions+=( neovim_autocd )
 
 # Use GPG agent for SSH
-# export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+
+if [[ "$NVIM_TERM" = '1' ]];
+then
+  alias vim='nvr -cc split --remote-wait'
+fi

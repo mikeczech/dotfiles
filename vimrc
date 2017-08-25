@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'https://github.com/scrooloose/nerdtree.git'
     Plug 'https://github.com/wikitopian/hardmode'
     Plug 'https://github.com/vim-syntastic/syntastic.git'
+    Plug 'terryma/vim-expand-region'
 call plug#end()
 
 syntax enable
@@ -33,8 +34,9 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call EasyMode()
 language en_US
 
 if has('nvim')
-  tnoremap <S-x> <c-\><c-n>
+  tnoremap <Esc> <C-\><C-n>
   set clipboard+=unnamedplus
+  let $NVIM_TERM = '1'
 endif
 
 " Set thin vertical bar
@@ -42,5 +44,8 @@ set fillchars+=vert:│
 hi VertSplit ctermbg=NONE guibg=NONE
 
 " Set working dir to current file
-set autochdir
+" set autochdir
 
+" Selections
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

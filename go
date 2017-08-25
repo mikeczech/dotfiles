@@ -18,6 +18,14 @@ function ensure_requirements {
   pip install -r requirements.txt
 }
 
+function task_backup_zsh_history {
+  local backup_dir=$(pwd)/zsh_history
+  local backup_path=$backup_dir/$(date "+%Y.%m.%d-%H.%M.%S").bak
+  mkdir -p $backup_dir
+  gpg --output $backup_path --encrypt --recipient mczech@thoughtworks.com ~/.zsh_history
+  echo "Successfully created backup $backup_path"
+}
+
 function task_install {
   if [ ! -d vendor/bundle ]; then
     bundle install --path=vendor/bundle --standalone --binstubs=vendor/binstubs
@@ -36,6 +44,7 @@ function task_install {
   make_symlink zshrc ~/.zshrc
   make_symlink tmux.conf ~/.tmux.conf
   make_symlink scripts ~/.scripts
+  make_symlink aliases ~/.aliases
 }
 
 function task_usage {
@@ -43,5 +52,6 @@ function task_usage {
 }
 case ${1:-} in
   install) task_install ;;
+  backup-zsh-history) task_backup_zsh_history ;;
   *) task_usage ;;
 esac
