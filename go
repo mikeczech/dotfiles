@@ -48,7 +48,7 @@ function task_install {
 }
 
 function task_usage {
-  echo "Usage: $0 install"
+  echo "Usage: $0 install | backup-zsh-history"
 }
 case ${1:-} in
   install) task_install ;;
