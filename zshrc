@@ -3,10 +3,7 @@ export ZSH=/Users/mczech/.oh-my-zsh
 
 ZSH_THEME="agnoster_short_prompt"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*) Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/ Example format: plugins=(rails git textmate ruby lighthouse) Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -18,7 +15,7 @@ else
 fi
 export TERM_PROGRAM=iTerm.app
 export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-export GIT_EDITOR=nvim
+export GIT_EDITOR=vim
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 source ~/.aliases
@@ -35,6 +32,8 @@ export AWS_DEFAULT_REGION="${AWS_REGION}"
 # Setup the C/C++ compiler
 export CC="/usr/local/opt/llvm/bin/clang"
 export CXX="/usr/local/opt/llvm/bin/clang++"
+# export CC="/usr/local/opt/gcc/bin/gcc-7"
+# export CXX="/usr/local/opt/gcc/bin/g++-7"
 
 # Make go apps accessible from PATH
 export GOPATH="/Users/mczech/go"
@@ -79,3 +78,5 @@ if [[ "$NVIM_TERM" = '1' ]];
 then
   alias vim='nvr -cc split --remote-wait'
 fi
+
+source /usr/local/opt/autoenv/activate.sh
