@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'https://github.com/scrooloose/nerdtree.git'
     Plug 'https://github.com/vim-syntastic/syntastic.git'
     Plug 'terryma/vim-expand-region'
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 
 syntax enable
