@@ -5,11 +5,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-    Plug 'https://github.com/scrooloose/nerdtree.git'
-    Plug 'https://github.com/vim-syntastic/syntastic.git'
+    Plug 'scrooloose/nerdtree'
+    Plug 'vim-syntastic/syntastic'
     Plug 'terryma/vim-expand-region'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'JamshedVesuna/vim-markdown-preview'
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 syntax enable
@@ -18,6 +19,7 @@ set number
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set updatetime=100
 set laststatus=2
 set backspace=indent,eol,start
 
