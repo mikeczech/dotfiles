@@ -23,6 +23,8 @@ set updatetime=100
 set laststatus=2
 set backspace=indent,eol,start
 
+let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
+
 " List certain whitespace characters
 set listchars=tab:>·,trail:~,extends:>,precedes:<
 set list
