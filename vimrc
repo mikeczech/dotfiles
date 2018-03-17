@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-syntastic/syntastic'
     Plug 'terryma/vim-expand-region'
     Plug 'terryma/vim-multiple-cursors'
-    Plug 'JamshedVesuna/vim-markdown-preview'
     Plug 'airblade/vim-gitgutter'
     Plug '0x84/vim-coderunner'
 call plug#end()
