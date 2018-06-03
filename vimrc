@@ -8,9 +8,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'vim-syntastic/syntastic'
     Plug 'terryma/vim-expand-region'
-    Plug 'terryma/vim-multiple-cursors'
     Plug 'airblade/vim-gitgutter'
     Plug '0x84/vim-coderunner'
+    Plug 'junegunn/goyo.vim'
 call plug#end()
 
 syntax enable
@@ -32,3 +32,6 @@ set list
 " Selections
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" Do not jump to next occurence when using *
+nnoremap * *``

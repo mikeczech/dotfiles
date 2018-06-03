@@ -21,6 +21,9 @@ function task_install {
   make_symlink xinitrc ~/.xinitrc
   make_symlink termite.conf ~/.config/termite/config
 
+  mkdir -p ~/.config/feh
+  make_symlink feh/themes ~/.config/feh/themes
+
   # for Yubikey SSH
   make_symlink gpg-agent.conf ~/.gnupg/gpg-agent.conf
 }
