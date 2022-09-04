@@ -18,14 +18,6 @@ function task_install {
   make_symlink vimrc ~/.vimrc
   make_symlink config.fish ~/.config/fish/config.fish
   make_symlink gitconfig ~/.gitconfig
-  make_symlink xinitrc ~/.xinitrc
-  make_symlink termite.conf ~/.config/termite/config
-
-  mkdir -p ~/.config/feh
-  make_symlink feh/themes ~/.config/feh/themes
-
-  # for Yubikey SSH
-  make_symlink gpg-agent.conf ~/.gnupg/gpg-agent.conf
 }
 
 function task_usage {

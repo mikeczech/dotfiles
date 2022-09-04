@@ -6,10 +6,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
-    Plug 'vim-syntastic/syntastic'
     Plug 'terryma/vim-expand-region'
     Plug 'airblade/vim-gitgutter'
-    Plug '0x84/vim-coderunner'
     Plug 'junegunn/goyo.vim'
 call plug#end()
 
@@ -22,8 +20,6 @@ set tabstop=2
 set updatetime=100
 set laststatus=2
 set backspace=indent,eol,start
-
-let g:syntastic_mode_map = { 'passive_filetypes': ['cpp'] }
 
 " List certain whitespace characters
 set listchars=tab:>·,trail:~,extends:>,precedes:<
