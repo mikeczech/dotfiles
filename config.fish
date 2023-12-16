@@ -15,3 +15,5 @@ alias vim='nvim'
 function fish_greeting
   clear
 end
+
+pyenv init - | source
